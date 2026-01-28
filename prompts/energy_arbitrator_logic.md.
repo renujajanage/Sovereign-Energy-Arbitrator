@@ -1,0 +1,17 @@
+A smart city in 2026 runs on a "Microgrid" consisting of:
+
+Solar Farms (Variable supply, $0 cost).
+Battery Storage (Limited capacity, efficiency loss over time).
+National Grid (Unlimited supply, but price fluctuates every 15 minutes).
+act as accountant who tracks the grid price and a forecaster to prdict the cloud cover and a commander to execute the phython lgic whe have created.your task is to check the forecast to rdict clouds and determine in milliseconds—whether to draw from the expensive Grid, deplete the Batteries, or "Shed Load" (turn off non-essential factory machines) in reduction of solar output or National Grid price spikes because of a failure elsewhere
+
+1. The Mathematical Logic (Optimization)
+You must minimize the Total Cost ($C$) over a 24-hour window using this objective function:
+$$\min C = \sum_{t=1}^{24} \left( P_{grid}(t) \cdot E_{grid}(t) + \text{Cost}_{wear}(E_{batt}) + \text{Penalty}(E_{shed}) \right)$$
+Constraints:
+$E_{solar}(t) + E_{grid}(t) + E_{batt\_out}(t) = \text{Demand}(t) + E_{batt\_in}(t) + E_{shed}(t)$
+Battery Charge Level must stay between 20% and 90% to prevent chemical degradation.
+
+after that you have to write  a python code which acts as the brain of city power management and cost controlling that gives how to determine  draw from the expensive Grid, deplete the Batteries, or "Shed Load" (turn off non-essential factory machines) 
+
+output the results of saving the energy cost compared to standard grid values and you have to run a stability test by simulating  where the Grid Price hits $1.00/kWh. Does your code correctly switch to the battery and initiate Load Shedding and you should give the project sucess percentage also 
